@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
+    {%block head%}
+    <title>Gym Manager</title>
+    {%endblock%}
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
 
-        {% block head %}
-            <title>Gym Manager</title>
-        {% endblock %}
-
-        <link rel="stylesheet" href="/styles.css">
-    </head>
-    <body>
-        <header>
-            <div class="links">
-                <a href="/" class="active">Instructors</a>
-                <a href="/members">Members</a>
-            </div>
-        </header>
-
-        {% block content %}{% endblock %}
-
-        
-    </body>
+  <body>
+      <header>
+        <div class="menu">
+          <a href="/instructors">Instructors</a>
+          <a href="/members">Members</a>
+        </div>
+      </header>
+      {% block content %}{% endblock %}
+  </body>
+  <script src="/js/scripts.js"></script>
 </html>
